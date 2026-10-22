@@ -1,168 +1,76 @@
-<<<<<<< HEAD
-# MERN Task Manager
+# Task Manager
 
-A MERN application for basic tasks management.
-![image](https://user-images.githubusercontent.com/86913048/227101123-f8a35258-9c21-4479-86e8-055659ab75e2.png)
-
-## Table of Contents
-
-- [Features](#features)
-- [Tools and Technologies](#tools-and-technologies)
-- [Dependencies](#dependencies)
-- [Dev-dependencies](#dev-dependencies)
-- [Prerequisites](#prerequisites)
-- [Installation and setup](#installation-and-setup)
-- [Backend API](#backend-api)
-- [frontend pages](#frontend-pages)
-- [npm scripts](#npm-scripts)
-- [Useful Links](#useful-links)
-- [Contact](#contact)
+A full-stack MERN application to manage daily tasks with user authentication.
 
 ## Features
 
-### User-side features
+- User registration and login
+- Create, view, update, and delete tasks
+- JWT-based authentication
+- Protected routes
+- MongoDB database integration
+- React frontend with Redux state management
+- Responsive user interface
+- Form validation and notifications
 
-- Signup
-- Login
-- Logout
-- Add tasks
-- View tasks
-- Update tasks
-- Delete tasks
+## Technologies Used
 
-### Developer-side features
+- **Frontend:** React, JavaScript, Redux, HTML, CSS, Tailwind CSS
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB
+- **Authentication:** JSON Web Tokens (JWT)
+- **Other Tools:** Axios, React Router, Mongoose, bcrypt, dotenv
 
-- Toasts for success and error messages
-- Form validations in frontend and backend
-- Fully Responsive Navbar
-- Token based Authentication
-- Use of 404 page for wrong urls
-- Relevant redirects
-- Global user state using Redux
-- Custom Loaders
-- Use of layout component for pages
-- Use of theme colors
-- No external CSS files needed (made using Tailwind CSS)
-- Usage of Tooltips
-- Dynamic document titles
-- Redirect to previous page after login
-- Use of various React hooks
-- Custom hook also used (useFetch)
-- Routes protection
-- Middleware for verifying the user in backend
-- Use of different HTTP status codes for sending responses
-- Standard pratices followed
+## Project Structure
 
-## Tools and Technologies
-
-- HTML
-- CSS
-- Javascript
-- Tailwind CSS
-- Node.js
-- Express.js
-- React
-- Redux
-- Mongodb
-
-## Dependencies
-
-Following are the major dependencies of the project:
-
-- axios
-- react
-- react-dom
-- react-redux
-- react-router-dom
-- react-toastify
-- redux
-- redux-thunk
-- bcrypt
-- cors
-- dotenv
-- express
-- jsonwebtoken
-- mongoose
-
-## Dev-dependencies
-
-Following are the major dev-dependencies of the project:
-
-- nodemon
-- concurrently
+- `frontend/` — React frontend
+- `backend/` — Node.js and Express backend
+- `package.json` — Root project scripts and dependencies
 
 ## Prerequisites
 
-- Node.js must be installed on the system.
-- You should have a MongoDB database.
-- You should have a code editor (preferred: VS Code)
+- Node.js and npm
+- MongoDB
+- Git
 
-## Installation and Setup
+## Installation
 
-1. Install all the dependencies
+1. Clone the repository:
 
-   ```sh
+   ```bash
+   git clone https://github.com/Dimpy2612/Task-Manager.git
+   cd Task-manager
+   ```
+
+2. Install dependencies:
+
+   ```bash
    npm run install-all
    ```
 
-2. Create a file named ".env" inside the backend folder. Add data from .env.example file and substitute your credentials there.
+3. Configure the required environment variables in the appropriate `.env` file. Never upload API keys, passwords, or database credentials.
 
-3. Start the application
+4. Start the application:
 
-   ```sh
+   ```bash
    npm run dev
    ```
 
-4. Go to http://localhost:3000
+5. Open the local frontend URL displayed in Terminal.
 
 ## Backend API
 
-<pre>
-- POST     /api/auth/signup
-- POST     /api/auth/login
-- GET      /api/tasks
-- GET      /api/tasks/:taskId
-- POST     /api/tasks
-- PUT      /api/tasks/:taskId
-- DELETE   /api/tasks/:taskId
-- GET      /api/profile
-</pre>
+| Method | Endpoint | Description |
+|---|---|---|
+| POST | `/api/auth/signup` | Register a user |
+| POST | `/api/auth/login` | Log in |
+| GET | `/api/tasks` | Retrieve tasks |
+| GET | `/api/tasks/:taskId` | Retrieve a specific task |
+| POST | `/api/tasks` | Create a task |
+| PUT | `/api/tasks/:taskId` | Update a task |
+| DELETE | `/api/tasks/:taskId` | Delete a task |
+| GET | `/api/profile` | Retrieve the user profile |
 
-## Frontend pages
+## Acknowledgment
 
-<pre>
-- /                 Home Screen (Public home page for guests and private dashboard (tasks) for logged-in users)
-- /signup           Signup page
-- /login            Login page
-- /tasks/add        Add new task
-- /tasks/:taskId    Edit a task
-</pre>
-
-## npm scripts
-
-At root:
-
-- `npm run dev`: Starts both backend and frontend
-- `npm run dev-server`: Starts only backend
-- `npm run dev-client`: Starts only frontend
-- `npm run install-all`: Installs all dependencies and dev-dependencies required at root, at frontend and at backend.
-
-Inside frontend folder:
-
-- `npm start`: Starts frontend in development mode
-- `npm run build`: Builds the frontend for production to the build folder
-- `npm test`: Launches the test runner in the interactive watch mode
-- `npm run eject`: This will remove the single build dependency from the frontend.
-
-Inside backend folder:
-
-- `npm run dev`: Starts backend using nodemon.
-- `npm start`: Starts backend without nodemon.
-
-
-
--
-=======
-# Task-manager
-This is task manager full stack application
->>>>>>> 403489305c888d9d0b50981e7af8ec8676406a30
+This project is based on an existing MERN Task Manager project. Please retain any attribution and license required by the original author.
